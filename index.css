@@ -15,194 +15,195 @@
 	box-sizing: border-box;
 }
 
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background-color: var(--light-grayish-blue);
-}
-
-main {
-	width: 78rem;
-	/* max-height: 30rem; */
-	border-radius: 1rem;
-	background-color: white;
-	box-shadow: 1rem 2rem 3rem hsla(217, 19%, 35%, 0.1);
-	display: grid;
-	grid-template-columns: .65fr 1fr;
-	grid-template-rows: 1fr .3fr;
-	grid-template-areas: 
-	"image article"
-	"image credits";
-}
-
-.img-containter {
-	background-image: url(images/drawers.jpg);
-	background-size: cover;
-	border-radius: 1rem 0 0 1rem;
-	grid-area: image;
-}
-
-.article-container {
-	padding: 3rem;
-	padding-left: 4rem;
-	padding-bottom: 0;
-	grid-area: article;
-}
-
-.article-container h1 {
-	color: var(--dark-grayish-blue);
-	font-weight: 700;
-	font-size: 2em;
-	padding-right: 4rem;
-}
-
-.article-container p {
-	color: var(--dark-grayish-blue);
-	line-height: 1.5;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	padding-right: 1.4rem;
-	font-size: 1.4rem;
-	font-weight: 500;
-	opacity: 0.9;
-}
-
-.credits-container {
-	display: grid;
-	grid-template-columns: 1fr 3fr 1fr;
-	padding-top: 2rem;
-	padding-bottom: 4rem;
-	padding-left: 2rem;
-	padding-right: 3rem;
-	grid-area: credits;
-}
-
-.avatar {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.avatar img {
-	width: 50%;
-	border-radius: 50%;
-}
-
-.credits {
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-}
-
-.credits h2 {
-	font-weight: 700;
-	color: var(--dark-grayish-blue);
-}
-
-.credits p {
-	font-weight: 500;
-	letter-spacing: .1rem;
-	color: var(--grayish-blue);
-	font-size: 1.2rem;
-}
-
-.share {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-}
-
 @keyframes fadeInUp {
 	0% {opacity: 0; transform: translateY(2rem);}
 	100% {opacity: 1; transform: translateY(0rem);}
 }
 
-.share-option {
-	background-color: var(--dark-grayish-blue);
-	position: absolute;
-	width: 27rem;
-	height: 6rem;
-	top: -8rem;
-	border-radius: 1rem;
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr 1fr;
-	padding: 1rem;
-	opacity: 0;
-	visibility: hidden;
-}
+@media screen and (max-width: 2560px) and (min-width: 800px) {
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		background-color: var(--light-grayish-blue);
+	}
 
-.show-share-options {
-	visibility: visible;
-	animation-fill-mode: forwards;
-	animation-name: fadeInUp;
-	animation-timing-function: ease;
-	animation-duration: .5s;
-}
+	main {
+		width: 78rem;
+		border-radius: 1rem;
+		background-color: white;
+		box-shadow: 1rem 2rem 3rem hsla(217, 19%, 35%, 0.1);
+		display: grid;
+		grid-template-columns: .65fr 1fr;
+		grid-template-rows: 1fr .3fr;
+		grid-template-areas: 
+		"image article"
+		"image credits";
+	}
 
-.triangle-down {
-	position: absolute;
-	width: 0;
-	height: 0;
-	left: 45%;
-	top: 100%;
-	border-left: 1.5rem solid transparent;
-	border-right: 1.5rem solid transparent;
-	border-top: 1.5rem solid var(--dark-grayish-blue);
-}
+	.img-containter {
+		background-image: url(images/drawers.jpg);
+		background-size: cover;
+		border-radius: 1rem 0 0 1rem;
+		grid-area: image;
+	}
 
-.facebook-image,
-.twitter-image,
-.pinterest-image {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-	border-radius: 1rem;
-	width: 80%;
-	transition: 0.2s ease;
-}
+	.article-container {
+		padding: 3rem;
+		padding-left: 4rem;
+		padding-bottom: 0;
+		grid-area: article;
+	}
 
-.facebook-image:hover,
-.twitter-image:hover,
-.pinterest-image:hover {
-	background-color: var(--grayish-blue);
-	
-}
+	.article-container h1 {
+		color: var(--dark-grayish-blue);
+		font-weight: 700;
+		font-size: 2em;
+		padding-right: 4rem;
+	}
 
-.share-option span {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 1.2rem;
-	letter-spacing: .5rem;
-	text-transform: uppercase;
-	font-weight: 700;
-	color: var(--grayish-blue);
-}
+	.article-container p {
+		color: var(--dark-grayish-blue);
+		line-height: 1.5;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		padding-right: 1.4rem;
+		font-size: 1.4rem;
+		font-weight: 500;
+		opacity: 0.9;
+	}
+
+	.credits-container {
+		display: grid;
+		grid-template-columns: 1fr 3fr 1fr;
+		padding-top: 2rem;
+		padding-bottom: 4rem;
+		padding-left: 2rem;
+		padding-right: 3rem;
+		grid-area: credits;
+	}
+
+	.avatar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.avatar img {
+		width: 50%;
+		border-radius: 50%;
+	}
+
+	.credits {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.credits h2 {
+		font-weight: 700;
+		color: var(--dark-grayish-blue);
+	}
+
+	.credits p {
+		font-weight: 500;
+		letter-spacing: .1rem;
+		color: var(--grayish-blue);
+		font-size: 1.2rem;
+	}
+
+	.share {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+
+	.share-option {
+		background-color: var(--dark-grayish-blue);
+		position: absolute;
+		width: 27rem;
+		height: 6rem;
+		top: -8rem;
+		border-radius: 1rem;
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr 1fr;
+		padding: 1rem;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.show-share-options {
+		visibility: visible;
+		animation-fill-mode: forwards;
+		animation-name: fadeInUp;
+		animation-timing-function: ease;
+		animation-duration: .5s;
+	}
+
+	.triangle-down {
+		position: absolute;
+		width: 0;
+		height: 0;
+		left: 45%;
+		top: 100%;
+		border-left: 1.5rem solid transparent;
+		border-right: 1.5rem solid transparent;
+		border-top: 1.5rem solid var(--dark-grayish-blue);
+	}
+
+	.facebook-image,
+	.twitter-image,
+	.pinterest-image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		border-radius: 1rem;
+		width: 80%;
+		transition: 0.2s ease;
+	}
+
+	.facebook-image:hover,
+	.twitter-image:hover,
+	.pinterest-image:hover {
+		background-color: var(--grayish-blue);
+		
+	}
+
+	.share-option span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.2rem;
+		letter-spacing: .5rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: var(--grayish-blue);
+	}
 
 
-.share-img-layer {
-	position: relative;
-	width: 3.5rem;
-	height: 3.5rem;
-	background-color: var(--light-grayish-blue);
-	border-radius: 50%;
-	cursor: pointer;
-}
+	.share-img-layer {
+		position: relative;
+		width: 3.5rem;
+		height: 3.5rem;
+		background-color: var(--light-grayish-blue);
+		border-radius: 50%;
+		cursor: pointer;
+	}
 
-.share-icon {
-	z-index: 1;
-	right: 40%;
-	position: absolute;
-	cursor: pointer;
+	.share-icon {
+		z-index: 1;
+		right: 40%;
+		position: absolute;
+		cursor: pointer;
+	}
 }
 
 /* Mobile Viewport */ /*did this first on max width then copy to mobile and change approach*/
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 800px) and (min-width: 300px) {
 	body {
 		display: flex;
 		justify-content: center;
@@ -299,9 +300,78 @@ main {
 		border-radius: 50%;
 	}
 
-	.share img {
+	.share-icon {
 		z-index: 1;
 		right: 35%;
 		position: absolute;
 	}
+
+	.share-option {
+		display: none;
+	}
+
+	/* TO BE CONTINUED, CREATE DIFFERENT ANMATION FOR MOBILE VER */
+
+	/* .share-option {
+		background-color: var(--dark-grayish-blue);
+		position: absolute;
+		width: 27rem;
+		height: 6rem;
+		top: -8rem;
+		border-radius: 1rem;
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr 1fr;
+		padding: 1rem;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.show-share-options {
+		visibility: visible;
+		animation-fill-mode: forwards;
+		animation-name: fadeInUp;
+		animation-timing-function: ease;
+		animation-duration: .5s;
+	}
+
+	.triangle-down {
+		position: absolute;
+		width: 0;
+		height: 0;
+		left: 45%;
+		top: 100%;
+		border-left: 1.5rem solid transparent;
+		border-right: 1.5rem solid transparent;
+		border-top: 1.5rem solid var(--dark-grayish-blue);
+	}
+
+	.facebook-image,
+	.twitter-image,
+	.pinterest-image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		border-radius: 1rem;
+		width: 80%;
+		transition: 0.2s ease;
+	}
+
+	.facebook-image:hover,
+	.twitter-image:hover,
+	.pinterest-image:hover {
+		background-color: var(--grayish-blue);
+		
+	}
+
+	.share-option span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.2rem;
+		letter-spacing: .5rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: var(--grayish-blue);
+	} */
 }
