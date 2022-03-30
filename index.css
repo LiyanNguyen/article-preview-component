@@ -218,6 +218,7 @@
 		background-color: white;
 		display: grid;
 		grid-template-rows: 1fr 1fr .3fr;
+		box-shadow: 1rem 2rem 3rem hsla(217, 19%, 35%, 0.1);
 	}
 
 	.img-containter {
@@ -310,14 +311,13 @@
 		display: none;
 	}
 
-	/* TO BE CONTINUED, CREATE DIFFERENT ANMATION FOR MOBILE VER */
-
-	/* .share-option {
+	.share-option {
 		background-color: var(--dark-grayish-blue);
 		position: absolute;
-		width: 27rem;
-		height: 6rem;
-		top: -8rem;
+		width: 20rem;
+		height: 4rem;
+		top: -4.5rem;
+		right: -1rem;
 		border-radius: 1rem;
 		display: grid;
 		grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -325,7 +325,7 @@
 		opacity: 0;
 		visibility: hidden;
 	}
-
+	
 	.show-share-options {
 		visibility: visible;
 		animation-fill-mode: forwards;
@@ -338,7 +338,7 @@
 		position: absolute;
 		width: 0;
 		height: 0;
-		left: 45%;
+		right: 10%;
 		top: 100%;
 		border-left: 1.5rem solid transparent;
 		border-right: 1.5rem solid transparent;
@@ -368,10 +368,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 1.2rem;
+		font-size: 1rem;
 		letter-spacing: .5rem;
 		text-transform: uppercase;
 		font-weight: 700;
 		color: var(--grayish-blue);
-	} */
+	} 
 }
