@@ -13,7 +13,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ### Links
 - Solution URL: https://github.com/LiyanNguyen/article-preview-component
-- Live Site URL: 
+- Live Site URL: https://astonishing-duckanoo-9f341c.netlify.app/
 
 ### Built with
 - Semantic HTML5 markup
